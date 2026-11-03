@@ -3,287 +3,217 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="RATZ IAcademy · Rat Race Reversed · Présentation gratuite des ateliers IA, 5 et 6 décembre 2026, Bruxelles.">
-<title>RATZ IAcademy Invitation</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Space+Mono:wght@400;700&display=swap">
+<meta name="description" content="RATZ IA Academy · Présentation gratuite des ateliers IA, 5 et 6 décembre 2026, Bruxelles.">
+<title>RATZ IA Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800;62..125,900&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-*{box-sizing:border-box}html,body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}img{max-width:100%}
-/* Layout: borne d'arcade — l'écran affiche un billet d'entrée géant pour la présentation ; les ateliers ne sont que l'aperçu des niveaux */
-:root{--bg:#1a0f2e;--screen:#24164a;--fg:#f4f0ff;--dim:#b9addb;--pink:#ff5fa2;--cyan:#56e0ff;--gold:#ffd23f;--paper:#fbf8ef;--ink:#1a0f2e;
---pixel:"Press Start 2P",monospace;--crt:"VT323",ui-monospace,monospace;--mono:"Space Mono",ui-monospace,monospace;color-scheme:dark}
-body{background:var(--bg);color:var(--fg);font:21px/1.35 var(--crt)}
-.wrap{max-width:860px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.screen{background:var(--screen);border:6px solid var(--pink);box-shadow:0 0 0 6px var(--bg),0 0 0 10px var(--cyan);padding:clamp(16px,4vw,32px)}
-.top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font:11px var(--pixel);color:var(--gold)}
-.brand{text-align:center;margin:26px 0 10px;font:clamp(26px,7vw,56px)/1.2 var(--pixel);color:var(--cyan);text-shadow:4px 4px 0 var(--pink)}
-.ready{text-align:center;font:clamp(10px,2vw,13px)/1.8 var(--pixel);color:var(--fg);margin:0}
-.blink{color:var(--gold)}
-@media (prefers-reduced-motion:no-preference){.blink{animation:bl 1.1s steps(1) infinite}@keyframes bl{50%{opacity:0}}}
-
-/* Billet */
-.ticket{display:grid;grid-template-columns:1fr auto;margin:28px 0 8px;background:var(--paper);color:var(--ink);font-family:var(--mono);transform:rotate(-1deg)}
-.main{padding:22px;min-width:0;border-right:3px dashed var(--ink)}
-.admit{font:12px var(--pixel);color:var(--pink);letter-spacing:.05em}
-.ticket h1{font:clamp(20px,4.6vw,36px)/1.25 var(--pixel);margin:12px 0;text-wrap:balance}
-.price{display:inline-block;background:var(--ink);color:var(--gold);font:clamp(14px,3vw,20px) var(--pixel);padding:8px 12px;margin-bottom:12px}
-.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;font-size:15px}
-.info small{display:block;font:700 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#6a5f86}
-.stubs{display:grid;grid-template-rows:1fr 1fr}
-.stub{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:12px 16px;text-decoration:none;color:var(--ink);font:12px/1.5 var(--pixel);text-align:center}
-.stub + .stub{border-top:3px dashed var(--ink)}
-.stub b{font-size:clamp(22px,4vw,30px);color:var(--pink)}
-.stub span{font:700 12px var(--mono);text-transform:uppercase}
-.stub:hover,.stub:focus-visible{background:var(--gold);outline:none}
-@media (max-width:520px){.ticket{grid-template-columns:1fr}.main{border-right:0;border-bottom:3px dashed var(--ink)}.stubs{grid-template-columns:1fr 1fr;grid-template-rows:none}.stub+.stub{border-top:0;border-left:3px dashed var(--ink)}}
-
-.season{text-align:center;font:clamp(10px,2vw,13px) var(--pixel);color:var(--pink);margin:22px 0 10px;letter-spacing:.2em}
-.rrr{text-align:center;font:clamp(30px,8.5vw,70px)/1.15 var(--pixel);color:var(--gold);text-shadow:4px 4px 0 var(--pink),8px 8px 0 var(--bg);margin:0 0 22px}
-.rrr{word-spacing:.6em;letter-spacing:0}
-.rrr .w{white-space:nowrap;font-weight:inherit}
-.rrr i{display:inline-block;font-style:normal;margin:0 .06em}
-.rrr i.f{}
-.sprite{display:flex;justify-content:center;margin-top:24px}
-.sprite canvas{width:240px;max-width:100%;height:auto;image-rendering:pixelated}
-
-.dialog{border:4px solid var(--fg);box-shadow:inset 0 0 0 3px var(--screen),inset 0 0 0 5px var(--dim);background:var(--bg);padding:16px 18px;margin-top:14px}
-.dialog p{margin:0 0 8px}
-.dialog p:last-child{margin:0}
-.who{font:10px var(--pixel);color:var(--pink);margin-right:8px}
-.hl{color:var(--gold)}
-.select{text-align:center;font:clamp(12px,2.4vw,15px) var(--pixel);color:var(--cyan);margin:30px 0 12px}
-.stages{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.stage{display:flex;flex-direction:column;align-items:center;gap:6px;border:3px solid var(--cyan);padding:16px 8px;text-decoration:none;color:var(--fg);font:9px var(--pixel)}
-.stage small{color:var(--pink)}
-.stage b{font:clamp(18px,4vw,28px) var(--pixel);color:var(--gold)}
-.stage:hover,.stage:focus-visible{border-color:var(--gold);background:var(--bg);outline:none}
-.stage:hover::before,.stage:focus-visible::before{content:"▶";color:var(--gold)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px;border-top:2px dashed var(--dim);padding-top:12px}
-.stats small{display:block;font:9px var(--pixel);color:var(--pink);margin-bottom:2px}
-.cta{display:block;width:max-content;max-width:100%;margin:30px auto 0;background:var(--pink);color:var(--bg);font:clamp(13px,2.6vw,17px) var(--pixel);padding:16px 24px;text-decoration:none;text-align:center}
-.cta:hover,.cta:focus-visible{background:var(--gold);outline:none}
-.note{text-align:center;color:var(--dim);margin:12px 0 0}
-
-h2{font:clamp(12px,2.4vw,15px)/1.6 var(--pixel);color:var(--gold);margin:44px 0 16px;text-align:center}
-.levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
-.lv{border:2px solid var(--cyan);padding:10px 12px;min-width:0}
-.lv small{font:9px var(--pixel);color:var(--pink)}
-.lv b{display:block;font:11px/1.6 var(--pixel);margin:6px 0 2px;color:var(--fg)}
-.lv p{margin:0;color:var(--dim);font-size:19px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0;padding:0;list-style:none}
-.steps li{border-top:3px solid var(--pink);padding-top:10px}
-.steps b{display:block;font:11px/1.6 var(--pixel);color:var(--cyan)}
-.foot{text-align:center;font:10px/1.8 var(--pixel);color:var(--dim);margin-top:40px}
-
-.reg{position:fixed;inset:0;z-index:20;background:rgba(10,5,20,.92);display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding-block:max(24px,env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.regbox{width:100%;max-width:620px;background:var(--screen);border:6px solid var(--cyan);box-shadow:0 0 0 6px var(--bg),0 0 0 10px var(--pink);padding:22px}
-.reghead{display:flex;justify-content:space-between;align-items:center;font:11px var(--pixel);color:var(--gold);gap:10px}
-.close{background:none;border:2px solid var(--dim);color:var(--fg);font:10px var(--pixel);padding:8px;cursor:pointer}
-.bar3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:16px 0 20px}
-.bar3 i{height:8px;background:var(--bg);border:1px solid var(--dim)}
-.bar3 i.on{background:var(--gold);border-color:var(--gold)}
-.q{font:clamp(12px,2.6vw,16px)/1.6 var(--pixel);color:var(--cyan);margin:0 0 14px}
-.opts{display:grid;gap:12px}
-.opts.two{grid-template-columns:1fr 1fr}
-.opt{display:block;text-align:left;background:var(--bg);color:var(--fg);border:3px solid var(--cyan);padding:14px;cursor:pointer;font:20px/1.3 var(--crt)}
-.opt small{display:block;font:9px var(--pixel);color:var(--pink);margin-bottom:6px}
-.opt b{display:block;font:12px/1.6 var(--pixel);color:var(--gold);margin-bottom:4px}
-.opt:hover,.opt:focus-visible,.opt[aria-pressed="true"]{border-color:var(--gold);outline:none}
-.opt[aria-pressed="true"]{background:#33205e}
-.opt[aria-pressed="true"] b::before{content:"▶ "}
-.field{display:grid;gap:6px;margin-bottom:12px}
-.field label{font:9px var(--pixel);color:var(--pink)}
-.field input{background:var(--bg);color:var(--fg);border:3px solid var(--cyan);padding:10px;font:22px var(--crt)}
-.field input:focus{border-color:var(--gold);outline:none}
-.recap{border:2px dashed var(--dim);padding:12px;margin:14px 0;font-size:20px}
-.recap b{color:var(--gold);font-weight:400}
-.nav{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
-.btn{background:var(--pink);color:var(--bg);border:0;font:12px var(--pixel);padding:14px 18px;cursor:pointer;text-decoration:none}
+*{box-sizing:border-box}html,body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}
+/* Layout: grille suisse 12 colonnes, filets noirs, aucun arrondi ; le jaune signal n'apparaît qu'en aplats ; bandes pleine largeur pour le titre et le manifeste */
+[hidden]{display:none!important}
+:root{--bg:#ffffff;--ink:#0a0a0a;--muted:#5d5d5d;--rule:#0a0a0a;--soft:#e6e6e3;--y:#ffd23f;
+--g:"Archivo","Helvetica Neue",Arial,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace;color-scheme:light}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.5 var(--g)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.bleed{box-shadow:0 0 0 100vmax var(--bandbg);clip-path:inset(0 -100vmax);background:var(--bandbg)}
+header{background:var(--ink);color:#fff}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:12px}
+.logo{font:800 15px var(--g);letter-spacing:.06em;text-transform:uppercase}
+.logo b{background:var(--y);color:var(--ink);padding:0 3px}
+.langs{display:flex}
+.langs button{background:none;border:1px solid #444;border-left-width:0;color:#bbb;font:500 12px var(--m);padding:6px 10px;cursor:pointer}
+.langs button:first-child{border-left-width:1px}
+.langs button[aria-pressed="true"]{background:var(--y);color:var(--ink);border-color:var(--y)}
+:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+main{display:block}
+.season{font:500 13px var(--m);letter-spacing:.08em;text-transform:uppercase;margin:48px 0 12px;display:flex;justify-content:space-between;border-bottom:2px solid var(--rule);padding-bottom:10px}
+.rrr{font:900 clamp(56px,13.5vw,176px)/.84 var(--g);font-stretch:68%;text-transform:uppercase;letter-spacing:-.01em;margin:18px 0 0}
+.rrr span{display:inline-block;background:var(--y);padding:0 .06em}
+.rrr i.f{display:inline-block;font-style:normal;transform:scaleX(-1)}
+.ready{font:600 clamp(18px,2.2vw,24px) var(--g);font-stretch:100%;margin:22px 0 40px;max-width:28ch}
+.welcome{display:grid;grid-template-columns:repeat(12,1fr);gap:0 20px;border-top:2px solid var(--rule);padding-block:22px 34px}
+.welcome p{grid-column:4 / span 9;margin:0;font:600 clamp(26px,3.6vw,46px)/1.08 var(--g);font-stretch:85%}
+.welcome p+p{color:var(--muted)}
+.welcome::before{content:"00";grid-column:1 / span 3;grid-row:1 / span 2;font:500 13px var(--m)}
+.days{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:2px solid var(--rule)}
+.day{display:flex;justify-content:space-between;align-items:flex-end;padding:20px 20px 18px 0;text-decoration:none;color:var(--ink);border-right:1px solid var(--rule)}
+.day+.day{padding-left:20px;border-right:0}
+.day b{font:900 clamp(56px,9vw,120px)/.85 var(--g);font-stretch:68%}
+.day span{font:500 13px var(--m)}
+.day:hover b{background:var(--y)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:0;border-block:1px solid var(--rule)}
+.stats div{padding:12px 16px 14px 0;min-width:0}
+.stats div+div{padding-left:16px;border-left:1px solid var(--soft)}
+.stats dt{font:500 11px var(--m);letter-spacing:.06em;color:var(--muted)}
+.stats dd{margin:4px 0 0;font-weight:600}
+.ctawrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-block:28px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--y);color:var(--ink);font:800 16px var(--g);letter-spacing:.04em;text-transform:uppercase;padding:16px 22px;border:2px solid var(--ink);text-decoration:none;cursor:pointer;border-radius:0}
+.btn::after{content:"→"}
+.btn:hover{background:var(--ink);color:var(--y)}
+.btn.ghost{background:var(--bg)}.btn.ghost::after,#back::after{content:none}
 .btn:disabled{opacity:.35;cursor:not-allowed}
-.btn.ghost{background:none;color:var(--fg);border:2px solid var(--dim)}
-.btn:hover:not(:disabled),.btn:focus-visible{background:var(--gold);color:var(--bg);outline:none}
-.err{color:var(--pink);min-height:1.2em;margin:0}
-
-.langs{display:flex;justify-content:flex-end;gap:6px;margin-bottom:14px}
-.langs button{background:var(--bg);color:var(--dim);border:2px solid var(--dim);font:10px var(--pixel);padding:8px 10px;cursor:pointer}
-.langs button[aria-pressed="true"]{color:var(--bg);background:var(--gold);border-color:var(--gold)}
-.langs button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
-.ticker{overflow:hidden;border-block:3px solid var(--pink);background:var(--bg);margin:6px 0 20px;padding-block:10px}
-.track{display:inline-flex;white-space:nowrap;font:clamp(11px,2.2vw,14px) var(--pixel);color:var(--cyan)}
-.track span{padding-right:1.2em}
-.track .sep{color:var(--pink)}
-.track .dup{display:inline-flex;padding:0}
-@media (prefers-reduced-motion:no-preference){.track{animation:tick 38s linear infinite}@keyframes tick{to{transform:translateX(-50%)}}}
-@media (prefers-reduced-motion:reduce){.track{white-space:normal;flex-wrap:wrap}.track .dup{display:none}}
-.flabel{font:9px var(--pixel);color:var(--pink)}
-
-.term{margin-top:40px;background:#050a05;border:3px solid #1f3d1f;box-shadow:0 0 24px rgba(51,255,102,.15) inset}
-.tbar{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:2px solid #1f3d1f;font:9px var(--pixel);color:#4f8f5a}
-.tbar i{width:9px;height:9px;background:#1f3d1f;display:inline-block}
-.tbar span{margin-left:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tout{margin:0;padding:16px;min-height:7.5em;font:clamp(20px,3.4vw,26px)/1.35 var(--crt);color:#33ff66;text-shadow:0 0 6px rgba(51,255,102,.6);white-space:pre-wrap;overflow-wrap:anywhere;background:repeating-linear-gradient(0deg,rgba(0,0,0,.25) 0 1px,transparent 1px 3px)}
-.tout .cur{animation:bl 1s steps(1) infinite}
-
-.chk{display:flex;gap:10px;align-items:flex-start;margin:8px 0;font-size:19px;cursor:pointer}
-.chk input{width:20px;height:20px;margin-top:3px;accent-color:#ffd23f;flex:none}
-.small{margin:6px 0 0;font-size:18px}
-.small a,.rgpd a{color:var(--cyan)}
-.rgpd{margin-top:28px;border:2px solid var(--dim);padding:12px 14px}
-.rgpd summary{font:10px var(--pixel);color:var(--gold);cursor:pointer}
-.rgpd dl{display:grid;grid-template-columns:minmax(110px,auto) 1fr;gap:8px 16px;margin:14px 0 0;font-size:18px}
-.rgpd dt{color:var(--pink)}
-.rgpd dd{margin:0;color:var(--fg);min-width:0}
-@media (max-width:520px){.rgpd dl{grid-template-columns:1fr}.rgpd dd{margin-bottom:6px}}
-
-#race{display:block;width:100%;height:auto;max-width:100%;image-rendering:pixelated;margin:-6px 0 18px;border-bottom:2px dashed var(--dim)}
-.intro{border:3px solid var(--cyan);padding:16px 18px;margin:0 0 26px}
-.intro h2{margin:0 0 10px;text-align:left}
-.intro p{margin:0;font-size:21px}
-
-.deck{position:relative;overflow:hidden}
-.slide{display:none}
-.slide.on{display:block}
-@media (prefers-reduced-motion:no-preference){
-.slide.in-r{animation:inR .45s steps(9) both}.slide.in-l{animation:inL .45s steps(9) both}
-@keyframes inR{from{transform:translateX(105%);opacity:.2}to{transform:none;opacity:1}}
-@keyframes inL{from{transform:translateX(-105%);opacity:.2}to{transform:none;opacity:1}}
-.flash.go{animation:fl .5s steps(5) both}
-@keyframes fl{0%{opacity:1}70%{opacity:1}100%{opacity:0}}}
-.screen{position:relative;overflow:hidden}
-.flash{position:absolute;inset:0;pointer-events:none;opacity:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(0deg,rgba(26,15,46,.85) 0 3px,rgba(36,22,74,.85) 3px 6px);font:clamp(14px,3vw,22px) var(--pixel);color:var(--gold);z-index:5}
-body{padding-bottom:calc(130px + env(safe-area-inset-bottom,0px))}
-.pad{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--bg);border-top:4px solid var(--pink);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;align-items:center;gap:10px}
-.padrow{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;max-width:860px}
-.pbtn{background:none;border:2px solid var(--cyan);color:var(--cyan);font:10px var(--pixel);padding:10px 12px;cursor:pointer;min-height:44px}
-.pbtn:disabled{opacity:.3;cursor:default}
-.pbtn:hover:not(:disabled),.pbtn:focus-visible{background:var(--cyan);color:var(--bg);outline:none}
-.dots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.dots button{width:16px;height:16px;padding:0;border:2px solid var(--dim);background:none;cursor:pointer}
-.dots button[aria-current="true"]{background:var(--gold);border-color:var(--gold)}
-.padcta{margin:0!important;width:auto;max-width:100%;padding:10px 22px!important;font-size:12px!important;text-align:center}
-@media (prefers-reduced-motion:no-preference){.padcta{animation:ctaBlink 1.1s steps(1) infinite}@keyframes ctaBlink{50%{background:var(--gold);color:var(--bg)}}}
-.lv p{line-height:1.25}
-.slide .levels{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
-.stagebox{border:4px solid var(--gold);background:var(--bg);padding:22px 18px;margin-top:10px}
-.stagebox .select{margin-top:0}
-.wipe{position:absolute;left:0;top:0;display:none;z-index:6;pointer-events:none;image-rendering:pixelated}
-.stagebar{position:fixed;left:0;right:0;bottom:calc(var(--padh,118px) + env(safe-area-inset-bottom,0px));z-index:16;display:flex;align-items:center;justify-content:center;gap:12px;padding:6px max(16px,env(safe-area-inset-right,0px)) 6px max(16px,env(safe-area-inset-left,0px));background:var(--bg);font:10px var(--pixel);color:var(--gold);pointer-events:none}
-.stagebar i{display:block;width:min(260px,45vw);height:12px;border:2px solid var(--cyan);padding:2px;box-sizing:border-box}
-.stagebar b{display:block;height:100%;width:14%;background:var(--pink)}
-@media (prefers-reduced-motion:no-preference){.stagebar b{transition:width .6s steps(8)}}
-body{padding-bottom:calc(160px + env(safe-area-inset-bottom,0px))!important}
+.btn.big{font-size:18px}
+.note{font:500 13px var(--m);margin:0}
+main section{display:grid;grid-template-columns:repeat(12,1fr);gap:0 20px;border-top:2px solid var(--rule);padding-block:20px 40px}
+main section>*{grid-column:4 / span 9;min-width:0}
+main section>.sh{grid-column:1 / span 3;font:800 15px/1.3 var(--g);text-transform:uppercase;letter-spacing:.04em;margin:0}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{display:grid;grid-template-columns:200px 1fr;gap:16px;padding-block:12px;border-bottom:1px solid var(--soft)}
+.steps li:first-child{padding-top:0}
+.steps b{font-weight:800}
+.levels{display:block;counter-reset:n}
+.lv{display:grid;grid-template-columns:56px 1fr;align-items:baseline;padding-block:10px;border-bottom:1px solid var(--soft)}
+.lv:first-child{padding-top:0}
+.lv small{font:500 13px var(--m);color:var(--muted)}
+.lv b{font:800 clamp(20px,2.4vw,28px)/1.1 var(--g);font-stretch:80%}
+.lv:hover b{background:var(--y)}
+.manif{--bandbg:var(--ink);color:var(--y);border-top:0;padding-block:40px 48px}
+.manif .sh{color:#fff}
+.term{background:none}
+.term .tbar{font:500 12px var(--m);color:#9a9a9a;margin-bottom:14px}
+.quote{font:500 clamp(20px,2.6vw,30px)/1.4 var(--m);margin:0;min-height:6.5em;white-space:pre-wrap;color:var(--y)}
+.quote .cur{color:#fff}
+@media (prefers-reduced-motion:no-preference){.quote .cur{animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}}
+.rgpd summary{font-weight:800;cursor:pointer;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+.rgpd dl{display:grid;grid-template-columns:200px 1fr;margin:16px 0 0;font-size:15px}
+.rgpd dt,.rgpd dd{padding-block:8px;border-top:1px solid var(--soft);margin:0}
+.rgpd dt{font:500 12px var(--m);color:var(--muted);padding-top:10px}
+footer{border-top:2px solid var(--rule);padding-block:18px 28px;font:500 12px var(--m)}
+/* inscription */
+.reg{position:fixed;inset:0;z-index:20;background:rgba(10,10,10,.7);display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding-block:max(32px,env(safe-area-inset-top,0px)) max(32px,env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.regbox{width:100%;max-width:640px;background:var(--bg);border:2px solid var(--ink);padding:24px}
+.reghead{display:flex;justify-content:space-between;align-items:center;gap:12px;font:800 13px var(--g);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--ink);padding-bottom:12px}
+.close{background:none;border:1px solid var(--ink);color:var(--ink);padding:6px 10px;font:500 12px var(--m);cursor:pointer}
+.bar3{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:16px 0 20px}
+.bar3 i{height:6px;background:var(--soft)}
+.bar3 i.on{background:var(--ink)}
+.q{font:800 clamp(24px,3vw,32px)/1.05 var(--g);font-stretch:80%;margin:0 0 16px;text-transform:uppercase}
+.opts{display:grid;gap:0;border-top:1px solid var(--ink)}
+.opts.two{grid-template-columns:1fr 1fr}
+.opts.two .opt+.opt{border-left:1px solid var(--ink)}
+.opt{text-align:left;background:var(--bg);color:var(--ink);border:0;border-bottom:1px solid var(--ink);padding:14px 12px;cursor:pointer;font:15px/1.45 var(--g)}
+.opt small{display:block;font:500 11px var(--m);color:var(--muted);margin-bottom:4px}
+.opt b{display:block;font:800 18px var(--g);font-stretch:85%;margin-bottom:2px}
+.opt span{color:var(--muted);font-size:14px}
+.opt:hover{background:#f6f6f3}
+.opt[aria-pressed="true"]{background:var(--y)}
+.opt[aria-pressed="true"] span{color:var(--ink)}
+.field{display:grid;gap:6px;margin-bottom:14px}
+.field label,.flabel{font:500 11px var(--m);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.field input{background:var(--bg);color:var(--ink);border:0;border-bottom:2px solid var(--ink);padding:8px 0;font:600 18px var(--g);border-radius:0}
+.field input:focus{outline:none;border-bottom-color:var(--y);background:#fffbea}
+.chk{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-size:14px;cursor:pointer}
+.chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--ink);flex:none}
+.small{font-size:14px;margin:6px 0 0}.small a{color:var(--ink)}
+.recap{border-left:6px solid var(--y);padding:8px 12px;margin:14px 0;font-size:14px}
+.err{color:#c4161c;min-height:1.3em;margin:0;font-size:14px;font-weight:600}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}
+.okmark{width:64px;height:64px;background:var(--y);border:2px solid var(--ink);display:grid;place-items:center;font:900 32px var(--g);margin:4px 0 14px}
+@media (max-width:820px){main section>*,main section>.sh,.welcome p{grid-column:1 / -1}.welcome::before{display:none}main section>.sh{margin-bottom:14px}.steps li,.rgpd dl{grid-template-columns:1fr}.steps li{gap:2px}}
+@media (max-width:560px){.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(3){padding-left:0;border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--soft)}.opts.two{grid-template-columns:1fr}.opts.two .opt+.opt{border-left:0}}
+.introp{font:600 clamp(19px,2vw,23px)/1.4 var(--g);margin:0;max-width:52ch}
 </style>
 </head>
 <body>
 
 
-<div class="wrap"><div class="screen">
-  <div class="langs" role="group" aria-label="Langue / Taal / Language">
-    <button type="button" data-lang="fr">FR</button><button type="button" data-lang="nl">NL</button><button type="button" data-lang="en">EN</button><button type="button" id="snd" aria-pressed="true" title="Son / Geluid / Sound">SON ON</button>
-  </div>
-  <div class="top"><span data-i="top1">1UP : TOI</span><span data-i="city">BRUXELLES</span><span data-i="credit">CRÉDIT : 0 €</span></div>
-  <div class="deck" id="deck" aria-live="polite">
-  <section class="slide on" data-slide="0" aria-label="1 / 7">
-  <p class="brand">RATZ IACADEMY</p>
-  <p class="season" data-i="season">SAISON 1</p>
-  <p class="rrr" aria-label="Rat Race Reversed"><b class="w"><i>R</i><i>A</i><i>T</i></b> <b class="w"><i>R</i><i>A</i><i>C</i><i>E</i></b> <b class="w"><i>R</i><i class="f">E</i><i>V</i><i class="f">E</i><i>R</i><i>S</i><i class="f">E</i><i>D</i></b></p>
-  <canvas id="race" width="360" height="54" aria-hidden="true"></canvas>
+<header><div class="wrap">
+  <div class="logo">RATZ <b>IA</b>cademy</div>
+  <div class="langs" role="group" aria-label="Langue / Taal / Language"><button type="button" data-lang="fr">FR</button><button type="button" data-lang="nl">NL</button><button type="button" data-lang="en">EN</button></div>
+</div></header>
+
+<main class="wrap">
+  <p class="season"><span>Bruxelles · FR / EN</span><span data-i="season">SAISON 1</span></p>
+  <h1 class="rrr">RATZ <span>IA Academy</span></h1>
   <p class="ready" data-i="ready">PRÉSENTATION GRATUITE DES ATELIERS</p>
 
-  <div class="dialog">
-    <p><span class="who">RATZ</span> Welcome to the <span class="hl">RATZ IAcademy</span>.</p>
-    <p><span class="who">RATZ</span> Use IA before IA uses you. <span class="blink">▼</span></p>
+  <div class="welcome">
+    <p>Welcome to the <b>RATZ IA Academy</b>.</p>
+    <p>Use IA before IA uses you.</p>
   </div>
 
+  <section class="introc">
+    <h2 class="sh" data-i="vT">Venez aux ateliers</h2>
+    <p class="introp" data-i="vX">Des ateliers pratiques en petit groupe pour apprendre à utiliser l'intelligence artificielle au quotidien, au travail et dans la société. Pas besoin de savoir coder : on apprend à diriger la machine. Découvrez les deux cycles lors de la présentation gratuite.</p>
   </section>
-  <section class="slide" data-slide="1" aria-label="2 / 7">
-  <div class="intro"><h2 data-i="vT">Venez aux ateliers</h2><p data-i="vX">Des ateliers pratiques en petit groupe pour apprendre à utiliser l'intelligence artificielle au quotidien, au travail et dans la société. Pas besoin de savoir coder : on apprend à diriger la machine. Découvrez les deux cycles lors de la présentation gratuite.</p></div>
 
-  <div class="stats">
-    <div><small data-i="priceL">PRIX</small><span data-i="free">GRATUIT</span></div>
-    <div><small data-i="timeL">HORAIRE</small>[heure]</div>
-    <div><small>MAP</small>[adresse], <span data-i="cityc">Bruxelles</span></div>
-    <div><small data-i="langL">LANGUE DES COURS</small><span data-i="langV">FR ou EN</span></div>
+  <div class="days">
+    <a class="day" href="#inscription" data-day="5"><b data-i="sat">SAM 5</b><span data-i="dec">DÉC 2026</span></a>
+    <a class="day" href="#inscription" data-day="6"><b data-i="sun">DIM 6</b><span data-i="dec">DÉC 2026</span></a>
   </div>
+  <dl class="stats">
+    <div><dt data-i="priceL">PRIX</dt><dd data-i="free">GRATUIT</dd></div>
+    <div><dt data-i="timeL">HORAIRE</dt><dd>[heure]</dd></div>
+    <div><dt>MAP</dt><dd>[adresse], <span data-i="cityc">Bruxelles</span></dd></div>
+    <div><dt data-i="langL">LANGUE DES COURS</dt><dd data-i="langV">FR ou EN</dd></div>
+  </dl>
 
-  </section>
-  <section class="slide" data-slide="2" aria-label="3 / 7">
-  <h2 data-i="how">Comment ça marche</h2>
-  <ol class="steps">
-    <li><b data-i="s1">1. INSCRIPTION</b><span data-i="s1t">Présentation gratuite, le 5 ou le 6 décembre.</span></li>
-    <li><b data-i="s2">2. PRÉSENTATION</b><span data-i="s2t">Les deux cycles d'ateliers, questions-réponses.</span></li>
-    <li><b data-i="s3">3. ATELIER</b><span data-i="s3t">Chaque atelier : 6 séances, en FR ou en EN.</span></li>
-  </ol>
+  <div class="ctawrap"><a class="btn big" href="#inscription" data-i="cta1">Réserver ma place</a>
+  <p class="note" data-i="limited">Places limitées.</p></div>
 
+  <section>
+    <h2 class="sh" data-i="how">Comment ça marche</h2>
+    <ol class="steps">
+      <li><b data-i="s1">1. INSCRIPTION</b><span data-i="s1t">Présentation gratuite, le 5 ou le 6 décembre.</span></li>
+      <li><b data-i="s2">2. PRÉSENTATION</b><span data-i="s2t">Les deux cycles d'ateliers, questions-réponses.</span></li>
+      <li><b data-i="s3">3. ATELIER</b><span data-i="s3t">Chaque atelier : 6 séances, en FR ou en EN.</span></li>
+    </ol>
   </section>
-  <section class="slide" data-slide="3" aria-label="4 / 7">
-  <h2 data-i="w1">Les 6 ateliers IA du quotidien</h2>
-  <div class="levels">
-    <div class="lv"><small>LEVEL 1</small><b>PROMPT MASTER</b><p data-i="x1">Apprendre à écrire des demandes claires à l'IA pour obtenir exactement le résultat voulu.</p></div>
-    <div class="lv"><small>LEVEL 2</small><b>LIFE EASY</b><p data-i="x2">Utiliser l'IA pour les tâches du quotidien : mails, courriers administratifs, budget, menus.</p></div>
-    <div class="lv"><small>LEVEL 3</small><b data-i="l3">VITRINE</b><p data-i="x3">Créer soi-même ses visuels, sa newsletter et un site web simple avec l'IA.</p></div>
-    <div class="lv"><small>LEVEL 4</small><b>BOSS EPSO</b><p data-i="x4">Se préparer aux concours EPSO : tests de raisonnement et entretien, avec l'IA comme coach.</p></div>
-    <div class="lv"><small>LEVEL 5</small><b data-i="l5">DEVOIRS EN JEU</b><p data-i="x5">Parents et enfants créent ensemble des jeux de révision à partir des leçons.</p></div>
-    <div class="lv"><small>LEVEL 6</small><b data-i="l6">PROJET PILOTE</b><p data-i="x6">Organiser un projet avec l'IA : planning, suivi des risques, comptes-rendus de réunion.</p></div>
-  </div>
 
+  <section>
+    <h2 class="sh" data-i="w1">Les 6 ateliers IA du quotidien</h2>
+    <div class="levels">
+      <div class="lv"><small>01</small><b data-i="c1">Prompt engineering : bien formuler ses demandes aux LLM</b></div>
+      <div class="lv"><small>02</small><b data-i="c2">Simplifier son quotidien avec les LLM</b></div>
+      <div class="lv"><small>03</small><b data-i="c3">Créer images, emails et site web avec les LLM</b></div>
+      <div class="lv"><small>04</small><b data-i="c4">Préparer les concours EPSO avec les LLM</b></div>
+      <div class="lv"><small>05</small><b data-i="c5">Devoirs et révisions en jeu, avec les enfants</b></div>
+      <div class="lv"><small>06</small><b data-i="c6">Gérer un projet avec les LLM</b></div>
+    </div>
   </section>
-  <section class="slide" data-slide="4" aria-label="5 / 7">
-  <h2 data-i="w2">Cycle IA &amp; démocratie</h2>
-  <div class="levels">
-    <div class="lv"><small>WORLD 2 · 1</small><b>CHATBOT / ROOM</b><p data-i="x7">Créer un espace de discussion avec une IA pour un groupe ou une association, sans base de données.</p></div>
-    <div class="lv"><small>WORLD 2 · 2</small><b data-i="d2">ÉCHANGE DE SERVICES</b><p data-i="x8">Organiser du troc et un système d'échange local (SEL) entre voisins, avec l'aide de l'IA.</p></div>
-    <div class="lv"><small>WORLD 2 · 3</small><b>BATNA</b><p data-i="x9">Trouver sa BATNA (sa meilleure solution si la négociation échoue) et partir de là pour négocier à plusieurs.</p></div>
-    <div class="lv"><small>WORLD 2 · 4</small><b data-i="d4">COMMUNS NUMÉRIQUES</b><p data-i="x10">Créer et partager des ressources libres pour un groupe : documents, outils, savoirs.</p></div>
-    <div class="lv"><small>WORLD 2 · 5</small><b data-i="d5">VÉRIFICATION DES MÉDIAS</b><p data-i="x11">Vérifier une information, une image ou une vidéo avant de la croire ou de la partager.</p></div>
-    <div class="lv"><small>WORLD 2 · 6</small><b data-i="d6">MONNAIE</b><p data-i="x12">Comprendre la monnaie et imaginer d'autres façons d'échanger de la valeur.</p></div>
-    <div class="lv"><small>WORLD 2 · 7</small><b data-i="d7">CRYPTOGRAPHIE</b><p data-i="x13">Comprendre comment on chiffre un message, et comment l'IA peut inventer des langages secrets.</p></div>
-    <div class="lv"><small>WORLD 2 · 8</small><b data-i="d8">RHIZOME &amp; DONNÉES</b><p data-i="x14">Comprendre comment les données circulent en réseau, à partir des idées de Deleuze et Guattari.</p></div>
-  </div>
 
+  <section>
+    <h2 class="sh" data-i="w2">Cycle IA &amp; démocratie</h2>
+    <div class="levels">
+      <div class="lv"><small>01</small><b data-i="c7">Créer un espace de discussion LLM (chatbot)</b></div>
+      <div class="lv"><small>02</small><b data-i="c8">Échanger des services : troc et SEL augmentés par les LLM</b></div>
+      <div class="lv"><small>03</small><b data-i="c9">Trouver la BATNA et partir de la BATNA</b></div>
+      <div class="lv"><small>04</small><b data-i="c10">Construire des communs numériques</b></div>
+      <div class="lv"><small>05</small><b data-i="c11">Vérifier les médias et repérer les fausses informations</b></div>
+      <div class="lv"><small>06</small><b data-i="c12">Repenser la monnaie et l'échange</b></div>
+      <div class="lv"><small>07</small><b data-i="c13">Cryptographie et langages générés par LLM</b></div>
+      <div class="lv"><small>08</small><b data-i="c14">Rhizome et données : penser en réseau</b></div>
+    </div>
   </section>
-  <section class="slide" data-slide="5" aria-label="6 / 7">
-  <div class="term" aria-label="RATZ terminal">
-    <div class="tbar"><i></i><i></i><i></i><span>ratz@iacademy:~$ ./manifesto</span></div>
-    <pre class="tout" id="ticker"></pre>
-  </div>
+
+  <div class="ctawrap" style="border-top:2px solid var(--rule)"><a class="btn big" href="#inscription" data-i="cta2">RÉSERVER MA PLACE GRATUITE</a></div>
+
+  <section class="manif bleed">
+    <h2 class="sh" data-i="manT">Manifeste</h2>
+    <div class="term">
+      <div class="tbar">&gt; ratz --manifesto</div>
+      <p class="quote" id="ticker" aria-live="off"></p>
+    </div>
+  </section>
+
+  <section>
+  <h2 class="sh">RGPD</h2>
   <details class="rgpd" id="rgpd">
     <summary data-i="rT">VIE PRIVÉE · RGPD</summary>
     <dl>
       <dt data-i="r1">Responsable</dt><dd>Rachid Seddouk · <span data-i="cityc">Bruxelles</span> · [email de contact]</dd>
-      <dt data-i="r2">Données collectées</dt><dd data-i="r2t">Nom, prénom, email, présentation choisie, jour, langue des cours.</dd>
-      <dt data-i="r3">Pourquoi</dt><dd data-i="r3t">Gérer ton inscription et t'envoyer les informations pratiques sur la présentation. Si tu l'as accepté, t'informer des prochains ateliers.</dd>
-      <dt data-i="r4">Base légale</dt><dd data-i="r4t">Ton consentement, que tu peux retirer à tout moment.</dd>
-      <dt data-i="r5">Durée</dt><dd data-i="r5t">Tes données sont supprimées au plus tard 6 mois après la présentation, sauf si tu t'inscris à un atelier.</dd>
-      <dt data-i="r6">Partage</dt><dd data-i="r6t">Tes données ne sont ni vendues ni cédées. Elles sont stockées dans un Google Sheet privé (Google).</dd>
-      <dt data-i="r7">Tes droits</dt><dd data-i="r7t">Accès, rectification, suppression, retrait du consentement : écris à l'adresse ci-dessus. Tu peux aussi porter plainte auprès de l'Autorité de protection des données (autoriteprotectiondonnees.be).</dd>
+      <dt data-i="r2">Données collectées</dt><dd data-i="r2t"></dd>
+      <dt data-i="r3">Pourquoi</dt><dd data-i="r3t"></dd>
+      <dt data-i="r4">Base légale</dt><dd data-i="r4t"></dd>
+      <dt data-i="r5">Durée</dt><dd data-i="r5t"></dd>
+      <dt data-i="r6">Partage</dt><dd data-i="r6t"></dd>
+      <dt data-i="r7">Tes droits</dt><dd data-i="r7t"></dd>
     </dl>
   </details>
-  <p class="foot">RATZ IACADEMY · <span data-i="city">BRUXELLES</span></p>
   </section>
-  <section class="slide" data-slide="6" aria-label="7 / 7">
-  <div class="stagebox">
-  <p class="select">SELECT STAGE</p>
-  <div class="stages">
-    <a class="stage" href="#inscription" data-day="5"><small>STAGE A</small><b data-i="sat">SAM 5</b><span data-i="dec">DÉC 2026</span></a>
-    <a class="stage" href="#inscription" data-day="6"><small>STAGE B</small><b data-i="sun">DIM 6</b><span data-i="dec">DÉC 2026</span></a>
-  </div>
-  <p class="note" data-i="limited">Places limitées.</p>
-  </div>
-  </section>
-  </div>
-  <div class="flash" id="flash" aria-hidden="true"><span id="flashT">STAGE 1</span></div>
-</div></div>
-<div class="stagebar" aria-hidden="true"><span id="sbT">STAGE 1 / 7</span><i><b id="sbF"></b></i></div>
-<nav class="pad" aria-label="Navigation">
-  <div class="padrow">
-    <button type="button" class="pbtn" id="prev" data-i="nPrev">◀ RETOUR</button>
-    <div class="dots" id="dots"></div>
-    <button type="button" class="pbtn" id="nextS" data-i="nNext">SUIVANT ▶</button>
-  </div>
-  <a class="cta padcta" href="#inscription" data-i="cta2">RÉSERVER MA PLACE GRATUITE</a>
-</nav>
+</main>
 
-
+<footer><div class="wrap">RATZ IA Academy · <span data-i="city">BRUXELLES</span></div></footer>
 <div class="reg" id="reg" hidden role="dialog" aria-modal="true" aria-labelledby="regtitle">
  <div class="regbox">
   <div class="reghead"><span id="regtitle" data-i="regT">INSCRIPTION · PRÉSENTATION GRATUITE</span><button class="close" id="regclose" type="button" data-i="quit">✕ QUITTER</button></div>
@@ -292,21 +222,21 @@ body{padding-bottom:calc(160px + env(safe-area-inset-bottom,0px))!important}
   <section data-step="1">
    <p class="q" data-i="q1">1 · CHOISIS TA PRÉSENTATION</p>
    <div class="opts">
-    <button type="button" class="opt" data-k="pres" data-v="1" aria-pressed="false"><small>PRÉSENTATION 1 · WORLD 1</small><b data-i="w1u">LES 6 ATELIERS IA DU QUOTIDIEN</b><span data-i="o1">Prompt Master · Life Easy · Vitrine · Boss EPSO · Devoirs en jeu · Projet pilote</span></button>
-    <button type="button" class="opt" data-k="pres" data-v="2" aria-pressed="false"><small>PRÉSENTATION 2 · WORLD 2</small><b data-i="w2u">CYCLE IA &amp; DÉMOCRATIE</b><span data-i="o2">Chatbot / Room · Échange de services · BATNA · Communs numériques · Vérification des médias · Monnaie · Cryptographie · Rhizome &amp; données</span></button>
+    <button type="button" class="opt" data-k="pres" data-v="1" aria-pressed="false"><small>PRÉSENTATION 1</small><b data-i="w1u">LES 6 ATELIERS IA DU QUOTIDIEN</b><span data-i="o1">Prompt Master · Life Easy · Vitrine · Boss EPSO · Devoirs en jeu · Projet pilote</span></button>
+    <button type="button" class="opt" data-k="pres" data-v="2" aria-pressed="false"><small>PRÉSENTATION 2</small><b data-i="w2u">CYCLE IA &amp; DÉMOCRATIE</b><span data-i="o2">Chatbot / Room · Échange de services · BATNA · Communs numériques · Vérification des médias · Monnaie · Cryptographie · Rhizome &amp; données</span></button>
    </div>
   </section>
 
   <section data-step="2" hidden>
    <p class="q" data-i="q2">2 · CHOISIS TON JOUR</p>
    <div class="opts two">
-    <button type="button" class="opt" data-k="day" data-v="5" aria-pressed="false"><small>STAGE A</small><b><span data-i="sat">SAM 5</span> <span data-i="decs">DÉC</span></b>2026 · [heure]</button>
-    <button type="button" class="opt" data-k="day" data-v="6" aria-pressed="false"><small>STAGE B</small><b><span data-i="sun">DIM 6</span> <span data-i="decs">DÉC</span></b>2026 · [heure]</button>
+    <button type="button" class="opt" data-k="day" data-v="5" aria-pressed="false"><b><span data-i="sat">SAM 5</span> <span data-i="decs">DÉC</span></b>2026 · [heure]</button>
+    <button type="button" class="opt" data-k="day" data-v="6" aria-pressed="false"><b><span data-i="sun">DIM 6</span> <span data-i="decs">DÉC</span></b>2026 · [heure]</button>
    </div>
   </section>
 
   <section data-step="3" hidden>
-   <p class="q" data-i="q3">3 · ENTRE TON NOM DE JOUEUR</p>
+   <p class="q" data-i="q3">3 · TES COORDONNÉES</p>
    <form id="regform" novalidate>
     <div class="field"><label for="f-name" data-i="nameL">PRÉNOM ET NOM</label><input id="f-name" name="nom" autocomplete="name" required></div>
     <div class="field"><label for="f-mail">EMAIL</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
@@ -323,11 +253,10 @@ body{padding-bottom:calc(160px + env(safe-area-inset-bottom,0px))!important}
   </section>
 
   <section data-step="4" hidden>
+   <div class="okmark" aria-hidden="true">✓</div>
    <p class="q" style="text-align:center" data-i="ok">MISSION ACCEPTÉE</p>
-   <div style="display:flex;justify-content:center"><canvas id="boomc" width="300" height="270" style="width:min(300px,100%);height:auto;image-rendering:pixelated;cursor:pointer" aria-label="Robot"></canvas></div>
-   <p style="text-align:center;margin:12px 0 0">Use IA before IA uses you.</p>
    <div class="recap" id="recap2"></div>
-   <p style="text-align:center;color:var(--dim)" data-i="okT">Le formulaire s'est ouvert dans un nouvel onglet : envoie-le pour confirmer ta place.</p>
+   <p style="text-align:center;color:var(--muted)" data-i="okT"></p>
   </section>
 
   <div class="nav" id="regnav">
@@ -340,11 +269,11 @@ body{padding-bottom:calc(160px + env(safe-area-inset-bottom,0px))!important}
 (function(){
   var SCRIPT_URL="https://script.google.com/macros/s/AKfycbwh7XofLW-7lKGkmyHqasSVFDChVxE5gkDScKoZz8tokNKQfTT2Z5dqWUCND2Vxw-WwIA/exec";
   var T={
-  fr:{nPrev:"◀ RETOUR",nNext:"SUIVANT ▶",vT:"Venez aux ateliers",vX:"Des ateliers pratiques en petit groupe pour apprendre à utiliser l'intelligence artificielle au quotidien, au travail et dans la société. Pas besoin de savoir coder : on apprend à diriger la machine. Découvrez les deux cycles lors de la présentation gratuite.",x1:"Apprendre à écrire des demandes claires à l'IA pour obtenir exactement le résultat voulu.",x2:"Utiliser l'IA pour les tâches du quotidien : mails, courriers administratifs, budget, menus.",x3:"Créer soi-même ses visuels, sa newsletter et un site web simple avec l'IA.",x4:"Se préparer aux concours EPSO : tests de raisonnement et entretien, avec l'IA comme coach.",x5:"Parents et enfants créent ensemble des jeux de révision à partir des leçons.",x6:"Organiser un projet avec l'IA : planning, suivi des risques, comptes-rendus de réunion.",x7:"Créer un espace de discussion avec une IA pour un groupe ou une association, sans base de données.",x8:"Organiser du troc et un système d'échange local (SEL) entre voisins, avec l'aide de l'IA.",x9:"Trouver sa BATNA (sa meilleure solution si la négociation échoue) et partir de là pour négocier à plusieurs.",x10:"Créer et partager des ressources libres pour un groupe : documents, outils, savoirs.",x11:"Vérifier une information, une image ou une vidéo avant de la croire ou de la partager.",x12:"Comprendre la monnaie et imaginer d'autres façons d'échanger de la valeur.",x13:"Comprendre comment on chiffre un message, et comment l'IA peut inventer des langages secrets.",x14:"Comprendre comment les données circulent en réseau, à partir des idées de Deleuze et Guattari.",cOk:"J'accepte que mes données soient utilisées pour gérer mon inscription à la présentation.",cNews:"Je veux recevoir les informations sur les prochains ateliers (facultatif).",cMore:"Lire la politique de confidentialité",eOk:"Coche la case de consentement pour t'inscrire.",rT:"VIE PRIVÉE · RGPD",r1:"Responsable",r2:"Données collectées",r2t:"Nom, prénom, email, présentation choisie, jour, langue des cours.",r3:"Pourquoi",r3t:"Gérer ton inscription et t'envoyer les informations pratiques sur la présentation. Si tu l'as accepté, t'informer des prochains ateliers.",r4:"Base légale",r4t:"Ton consentement, que tu peux retirer à tout moment.",r5:"Durée",r5t:"Tes données sont supprimées au plus tard 6 mois après la présentation, sauf si tu t'inscris à un atelier.",r6:"Partage",r6t:"Tes données ne sont ni vendues ni cédées. Elles sont stockées dans un Google Sheet privé (Google).",r7:"Tes droits",r7t:"Accès, rectification, suppression, retrait du consentement : écris à l'adresse ci-dessus. Tu peux aussi porter plainte auprès de l'Autorité de protection des données (autoriteprotectiondonnees.be).",top1:"1UP : TOI",city:"BRUXELLES",cityc:"Bruxelles",credit:"CRÉDIT : 0 €",season:"SAISON 1",ready:"PRÉSENTATION GRATUITE DES ATELIERS",sat:"SAM 5",sun:"DIM 6",dec:"DÉC 2026",decs:"DÉC",priceL:"PRIX",free:"GRATUIT",timeL:"HORAIRE",langL:"LANGUE DES COURS",langV:"FR ou EN",limited:"Places limitées.",how:"Comment ça marche",s1:"1. INSCRIPTION",s1t:"Présentation gratuite, le 5 ou le 6 décembre.",s2:"2. PRÉSENTATION",s2t:"Les deux cycles d'ateliers, questions-réponses.",s3:"3. ATELIER",s3t:"Chaque atelier : 6 séances, en FR ou en EN.",w1:"Les 6 ateliers IA du quotidien",w1u:"LES 6 ATELIERS IA DU QUOTIDIEN",l3:"VITRINE",l5:"DEVOIRS EN JEU",l6:"PROJET PILOTE",w2:"Cycle IA & démocratie",w2u:"CYCLE IA & DÉMOCRATIE",d2:"ÉCHANGE DE SERVICES",d4:"COMMUNS NUMÉRIQUES",d5:"VÉRIFICATION DES MÉDIAS",d6:"MONNAIE",d7:"CRYPTOGRAPHIE",d8:"RHIZOME & DONNÉES",cta2:"RÉSERVER MA PLACE GRATUITE",regT:"INSCRIPTION · PRÉSENTATION GRATUITE",quit:"✕ QUITTER",q1:"1 · CHOISIS TA PRÉSENTATION",o1:"Prompt Master · Life Easy · Vitrine · Boss EPSO · Devoirs en jeu · Projet pilote",o2:"Chatbot / Room · Échange de services · BATNA · Communs numériques · Vérification des médias · Monnaie · Cryptographie · Rhizome & données",q2:"2 · CHOISIS TON JOUR",q3:"3 · ENTRE TON NOM DE JOUEUR",nameL:"PRÉNOM ET NOM",fr:"Français",ok:"MISSION ACCEPTÉE",okT:"Ta place est réservée. Un email de confirmation arrive dans ta boîte.",sending:"ENVOI…",eSend:"L'inscription n'a pas pu être envoyée. Vérifie ta connexion et réessaie.",openF:"OUVRIR LE FORMULAIRE",back:"◀ RETOUR",next:"SUIVANT ▶",val:"▶ VALIDER",p1:"Présentation 1 · Les 6 ateliers IA du quotidien",p2:"Présentation 2 · Cycle IA & démocratie",day5:"Samedi 5 décembre 2026",day6:"Dimanche 6 décembre 2026",courses:"Cours en ",eName:"Entre ton prénom et ton nom.",eMail:"Entre une adresse email valide, par exemple nom@exemple.be.",eLang:"Choisis la langue des cours : FR ou EN.",
+  fr:{vT:"Venez aux ateliers",vX:"Des ateliers pratiques en petit groupe pour apprendre à utiliser l'intelligence artificielle au quotidien, au travail et dans la société. Pas besoin de savoir coder : on apprend à diriger la machine. Découvrez les deux cycles lors de la présentation gratuite.",c1:"Prompt engineering : bien formuler ses demandes aux LLM",c2:"Simplifier son quotidien avec les LLM",c3:"Créer images, emails et site web avec les LLM",c4:"Préparer les concours EPSO avec les LLM",c5:"Devoirs et révisions en jeu, avec les enfants",c6:"Gérer un projet avec les LLM",c7:"Créer un espace de discussion LLM (chatbot)",c8:"Échanger des services : troc et SEL augmentés par les LLM",c9:"Trouver la BATNA et partir de la BATNA",c10:"Construire des communs numériques",c11:"Vérifier les médias et repérer les fausses informations",c12:"Repenser la monnaie et l'échange",c13:"Cryptographie et langages générés par LLM",c14:"Rhizome et données : penser en réseau",eyebrow:"Saison 1 · Ateliers IA",datesL:"Dates",cta1:"Réserver ma place",progT:"Programme",manT:"Manifeste",modL:"Module",hero:"Présentation gratuite des ateliers IA, à Bruxelles. Deux cycles, six séances par atelier, en français ou en anglais.",cOk:"J'accepte que mes données soient utilisées pour gérer mon inscription à la présentation.",cNews:"Je veux recevoir les informations sur les prochains ateliers (facultatif).",cMore:"Lire la politique de confidentialité",eOk:"Coche la case de consentement pour t'inscrire.",rT:"VIE PRIVÉE · RGPD",r1:"Responsable",r2:"Données collectées",r2t:"Nom, prénom, email, présentation choisie, jour, langue des cours.",r3:"Pourquoi",r3t:"Gérer ton inscription et t'envoyer les informations pratiques sur la présentation. Si tu l'as accepté, t'informer des prochains ateliers.",r4:"Base légale",r4t:"Ton consentement, que tu peux retirer à tout moment.",r5:"Durée",r5t:"Tes données sont supprimées au plus tard 6 mois après la présentation, sauf si tu t'inscris à un atelier.",r6:"Partage",r6t:"Tes données ne sont ni vendues ni cédées. Elles sont stockées dans un Google Sheet privé (Google).",r7:"Tes droits",r7t:"Accès, rectification, suppression, retrait du consentement : écris à l'adresse ci-dessus. Tu peux aussi porter plainte auprès de l'Autorité de protection des données (autoriteprotectiondonnees.be).",top1:"1UP : TOI",city:"BRUXELLES",cityc:"Bruxelles",credit:"CRÉDIT : 0 €",season:"SAISON 1",ready:"PRÉSENTATION GRATUITE DES ATELIERS",sat:"SAM 5",sun:"DIM 6",dec:"DÉC 2026",decs:"DÉC",priceL:"PRIX",free:"GRATUIT",timeL:"HORAIRE",langL:"LANGUE DES COURS",langV:"FR ou EN",limited:"Places limitées.",how:"Comment ça marche",s1:"1. INSCRIPTION",s1t:"Présentation gratuite, le 5 ou le 6 décembre.",s2:"2. PRÉSENTATION",s2t:"Les deux cycles d'ateliers, questions-réponses.",s3:"3. ATELIER",s3t:"Chaque atelier : 6 séances, en FR ou en EN.",w1:"Les 6 ateliers IA du quotidien",w1u:"LES 6 ATELIERS IA DU QUOTIDIEN",l3:"VITRINE",l5:"DEVOIRS EN JEU",l6:"PROJET PILOTE",w2:"Cycle IA & démocratie",w2u:"CYCLE IA & DÉMOCRATIE",d2:"ÉCHANGE DE SERVICES",d4:"COMMUNS NUMÉRIQUES",d5:"VÉRIFICATION DES MÉDIAS",d6:"MONNAIE",d7:"CRYPTOGRAPHIE",d8:"RHIZOME & DONNÉES",cta2:"RÉSERVER MA PLACE GRATUITE",regT:"INSCRIPTION · PRÉSENTATION GRATUITE",quit:"✕ QUITTER",q1:"1 · CHOISIS TA PRÉSENTATION",o1:"Prompt Master · Life Easy · Vitrine · Boss EPSO · Devoirs en jeu · Projet pilote",o2:"Chatbot / Room · Échange de services · BATNA · Communs numériques · Vérification des médias · Monnaie · Cryptographie · Rhizome & données",q2:"2 · CHOISIS TON JOUR",q3:"3 · TES COORDONNÉES",nameL:"PRÉNOM ET NOM",fr:"Français",ok:"Inscription confirmée",okT:"Ta place est réservée. Un email de confirmation arrive dans ta boîte.",sending:"ENVOI…",eSend:"L'inscription n'a pas pu être envoyée. Vérifie ta connexion et réessaie.",openF:"OUVRIR LE FORMULAIRE",back:"◀ RETOUR",next:"SUIVANT ▶",val:"▶ VALIDER",p1:"Présentation 1 · Les 6 ateliers IA du quotidien",p2:"Présentation 2 · Cycle IA & démocratie",day5:"Samedi 5 décembre 2026",day6:"Dimanche 6 décembre 2026",courses:"Cours en ",eName:"Entre ton prénom et ton nom.",eMail:"Entre une adresse email valide, par exemple nom@exemple.be.",eLang:"Choisis la langue des cours : FR ou EN.",
    tick:["L’école t’a appris à obéir. Nous, à commander.","Le futur ne s’attend pas. Il se prompte.","Ils l’entraînent sur toi. Entraîne-toi sur elle."]},
-  nl:{nPrev:"◀ TERUG",nNext:"VOLGENDE ▶",vT:"Kom naar de workshops",vX:"Praktische workshops in kleine groep om artificiële intelligentie te leren gebruiken in het dagelijks leven, op het werk en in de samenleving. Je hoeft niet te kunnen coderen: je leert de machine aansturen. Ontdek de twee reeksen tijdens de gratis voorstelling.",x1:"Leren om duidelijke vragen aan AI te stellen en precies het gewenste resultaat te krijgen.",x2:"AI gebruiken voor dagelijkse taken: mails, administratieve brieven, budget, menu's.",x3:"Zelf je beelden, nieuwsbrief en een eenvoudige website maken met AI.",x4:"Je voorbereiden op de EPSO-selecties: redeneertests en interview, met AI als coach.",x5:"Ouders en kinderen maken samen herhalingsspellen op basis van de lessen.",x6:"Een project organiseren met AI: planning, risicobeheer, vergaderverslagen.",x7:"Een gespreksruimte met AI maken voor een groep of vereniging, zonder database.",x8:"Ruilhandel en een lokaal ruilsysteem (LETS) tussen buren organiseren, met hulp van AI.",x9:"Je BATNA vinden (je beste alternatief als de onderhandeling mislukt) en van daaruit met meerdere partijen onderhandelen.",x10:"Vrije middelen maken en delen binnen een groep: documenten, tools, kennis.",x11:"Een bericht, beeld of video controleren voordat je het gelooft of deelt.",x12:"Geld begrijpen en andere manieren bedenken om waarde uit te wisselen.",x13:"Begrijpen hoe je een bericht versleutelt, en hoe AI geheime talen kan bedenken.",x14:"Begrijpen hoe data in netwerken circuleren, vanuit de ideeën van Deleuze en Guattari.",cOk:"Ik ga ermee akkoord dat mijn gegevens worden gebruikt om mijn inschrijving voor de voorstelling te beheren.",cNews:"Ik wil informatie ontvangen over de volgende workshops (optioneel).",cMore:"Lees het privacybeleid",eOk:"Vink het toestemmingsvakje aan om je in te schrijven.",rT:"PRIVACY · AVG",r1:"Verantwoordelijke",r2:"Verzamelde gegevens",r2t:"Naam, voornaam, e-mail, gekozen voorstelling, dag, taal van de lessen.",r3:"Waarom",r3t:"Je inschrijving beheren en je praktische informatie over de voorstelling sturen. Als je dat aanvaardt, je informeren over de volgende workshops.",r4:"Rechtsgrond",r4t:"Je toestemming, die je op elk moment kunt intrekken.",r5:"Bewaartermijn",r5t:"Je gegevens worden uiterlijk 6 maanden na de voorstelling verwijderd, tenzij je je inschrijft voor een workshop.",r6:"Delen",r6t:"Je gegevens worden niet verkocht of doorgegeven. Ze worden opgeslagen in een privé Google Sheet (Google).",r7:"Je rechten",r7t:"Inzage, verbetering, verwijdering, intrekking van je toestemming: schrijf naar het adres hierboven. Je kunt ook klacht indienen bij de Gegevensbeschermingsautoriteit (gegevensbeschermingsautoriteit.be).",top1:"1UP: JIJ",city:"BRUSSEL",cityc:"Brussel",credit:"KREDIET: 0 €",season:"SEIZOEN 1",ready:"GRATIS VOORSTELLING VAN DE WORKSHOPS",sat:"ZA 5",sun:"ZO 6",dec:"DEC 2026",decs:"DEC",priceL:"PRIJS",free:"GRATIS",timeL:"UUR",langL:"TAAL VAN DE LESSEN",langV:"FR of EN",limited:"Beperkt aantal plaatsen.",how:"Hoe werkt het",s1:"1. INSCHRIJVING",s1t:"Gratis voorstelling, op 5 of 6 december.",s2:"2. VOORSTELLING",s2t:"De twee workshopreeksen, vragen en antwoorden.",s3:"3. WORKSHOP",s3t:"Elke workshop: 6 sessies, in het FR of EN.",w1:"De 6 AI-workshops voor elke dag",w1u:"DE 6 AI-WORKSHOPS VOOR ELKE DAG",l3:"ETALAGE",l5:"HUISWERK ALS GAME",l6:"PROJECTPILOOT",w2:"Reeks AI & democratie",w2u:"REEKS AI & DEMOCRATIE",d2:"DIENSTENRUIL",d4:"DIGITALE COMMONS",d5:"MEDIACONTROLE",d6:"GELD",d7:"CRYPTOGRAFIE",d8:"RHIZOOM & DATA",cta2:"RESERVEER MIJN GRATIS PLAATS",regT:"INSCHRIJVING · GRATIS VOORSTELLING",quit:"✕ SLUITEN",q1:"1 · KIES JE VOORSTELLING",o1:"Prompt Master · Life Easy · Etalage · Boss EPSO · Huiswerk als game · Projectpiloot",o2:"Chatbot / Room · Dienstenruil · BATNA · Digitale commons · Mediacontrole · Geld · Cryptografie · Rhizoom & data",q2:"2 · KIES JE DAG",q3:"3 · VUL JE SPELERSNAAM IN",nameL:"VOOR- EN ACHTERNAAM",fr:"Frans",ok:"MISSIE AANVAARD",okT:"Je plaats is gereserveerd. Er komt een bevestigingsmail in je mailbox.",sending:"VERZENDEN…",eSend:"De inschrijving kon niet worden verstuurd. Controleer je verbinding en probeer opnieuw.",openF:"OPEN HET FORMULIER",back:"◀ TERUG",next:"VOLGENDE ▶",val:"▶ BEVESTIGEN",p1:"Voorstelling 1 · De 6 AI-workshops voor elke dag",p2:"Voorstelling 2 · Reeks AI & democratie",day5:"Zaterdag 5 december 2026",day6:"Zondag 6 december 2026",courses:"Lessen in het ",eName:"Vul je voor- en achternaam in.",eMail:"Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.be.",eLang:"Kies de taal van de lessen: FR of EN.",
+  nl:{vT:"Kom naar de workshops",vX:"Praktische workshops in kleine groep om artificiële intelligentie te leren gebruiken in het dagelijks leven, op het werk en in de samenleving. Je hoeft niet te kunnen coderen: je leert de machine aansturen. Ontdek de twee reeksen tijdens de gratis voorstelling.",c1:"Prompt engineering: LLM's de juiste vragen stellen",c2:"Je dagelijks leven vereenvoudigen met LLM's",c3:"Beelden, e-mails en een website maken met LLM's",c4:"Je voorbereiden op EPSO-selecties met LLM's",c5:"Huiswerk en herhaling als spel, met de kinderen",c6:"Een project beheren met LLM's",c7:"Een LLM-gespreksruimte maken (chatbot)",c8:"Diensten ruilen: ruilhandel en LETS versterkt door LLM's",c9:"De BATNA vinden en vanuit de BATNA vertrekken",c10:"Digitale commons opbouwen",c11:"Media controleren en desinformatie herkennen",c12:"Geld en ruil opnieuw bekijken",c13:"Cryptografie en door LLM's gegenereerde talen",c14:"Rhizoom en data: denken in netwerken",eyebrow:"Seizoen 1 · AI-workshops",datesL:"Data",cta1:"Mijn plaats reserveren",progT:"Programma",manT:"Manifest",modL:"Module",hero:"Gratis voorstelling van de AI-workshops, in Brussel. Twee reeksen, zes sessies per workshop, in het Frans of het Engels.",cOk:"Ik ga ermee akkoord dat mijn gegevens worden gebruikt om mijn inschrijving voor de voorstelling te beheren.",cNews:"Ik wil informatie ontvangen over de volgende workshops (optioneel).",cMore:"Lees het privacybeleid",eOk:"Vink het toestemmingsvakje aan om je in te schrijven.",rT:"PRIVACY · AVG",r1:"Verantwoordelijke",r2:"Verzamelde gegevens",r2t:"Naam, voornaam, e-mail, gekozen voorstelling, dag, taal van de lessen.",r3:"Waarom",r3t:"Je inschrijving beheren en je praktische informatie over de voorstelling sturen. Als je dat aanvaardt, je informeren over de volgende workshops.",r4:"Rechtsgrond",r4t:"Je toestemming, die je op elk moment kunt intrekken.",r5:"Bewaartermijn",r5t:"Je gegevens worden uiterlijk 6 maanden na de voorstelling verwijderd, tenzij je je inschrijft voor een workshop.",r6:"Delen",r6t:"Je gegevens worden niet verkocht of doorgegeven. Ze worden opgeslagen in een privé Google Sheet (Google).",r7:"Je rechten",r7t:"Inzage, verbetering, verwijdering, intrekking van je toestemming: schrijf naar het adres hierboven. Je kunt ook klacht indienen bij de Gegevensbeschermingsautoriteit (gegevensbeschermingsautoriteit.be).",top1:"1UP: JIJ",city:"BRUSSEL",cityc:"Brussel",credit:"KREDIET: 0 €",season:"SEIZOEN 1",ready:"GRATIS VOORSTELLING VAN DE WORKSHOPS",sat:"ZA 5",sun:"ZO 6",dec:"DEC 2026",decs:"DEC",priceL:"PRIJS",free:"GRATIS",timeL:"UUR",langL:"TAAL VAN DE LESSEN",langV:"FR of EN",limited:"Beperkt aantal plaatsen.",how:"Hoe werkt het",s1:"1. INSCHRIJVING",s1t:"Gratis voorstelling, op 5 of 6 december.",s2:"2. VOORSTELLING",s2t:"De twee workshopreeksen, vragen en antwoorden.",s3:"3. WORKSHOP",s3t:"Elke workshop: 6 sessies, in het FR of EN.",w1:"De 6 AI-workshops voor elke dag",w1u:"DE 6 AI-WORKSHOPS VOOR ELKE DAG",l3:"ETALAGE",l5:"HUISWERK ALS GAME",l6:"PROJECTPILOOT",w2:"Reeks AI & democratie",w2u:"REEKS AI & DEMOCRATIE",d2:"DIENSTENRUIL",d4:"DIGITALE COMMONS",d5:"MEDIACONTROLE",d6:"GELD",d7:"CRYPTOGRAFIE",d8:"RHIZOOM & DATA",cta2:"RESERVEER MIJN GRATIS PLAATS",regT:"INSCHRIJVING · GRATIS VOORSTELLING",quit:"✕ SLUITEN",q1:"1 · KIES JE VOORSTELLING",o1:"Prompt Master · Life Easy · Etalage · Boss EPSO · Huiswerk als game · Projectpiloot",o2:"Chatbot / Room · Dienstenruil · BATNA · Digitale commons · Mediacontrole · Geld · Cryptografie · Rhizoom & data",q2:"2 · KIES JE DAG",q3:"3 · JE GEGEVENS",nameL:"VOOR- EN ACHTERNAAM",fr:"Frans",ok:"Inschrijving bevestigd",okT:"Je plaats is gereserveerd. Er komt een bevestigingsmail in je mailbox.",sending:"VERZENDEN…",eSend:"De inschrijving kon niet worden verstuurd. Controleer je verbinding en probeer opnieuw.",openF:"OPEN HET FORMULIER",back:"◀ TERUG",next:"VOLGENDE ▶",val:"▶ BEVESTIGEN",p1:"Voorstelling 1 · De 6 AI-workshops voor elke dag",p2:"Voorstelling 2 · Reeks AI & democratie",day5:"Zaterdag 5 december 2026",day6:"Zondag 6 december 2026",courses:"Lessen in het ",eName:"Vul je voor- en achternaam in.",eMail:"Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.be.",eLang:"Kies de taal van de lessen: FR of EN.",
    tick:["School leerde je gehoorzamen. Wij leren je bevelen.","De toekomst wacht je niet af. Je prompt haar.","Ze trainen het op jou. Train jij jezelf erop."]},
-  en:{nPrev:"◀ BACK",nNext:"NEXT ▶",vT:"Come to the workshops",vX:"Hands-on workshops in small groups to learn how to use artificial intelligence in daily life, at work and in society. No coding needed: you learn to direct the machine. Discover both series at the free presentation.",x1:"Learn to write clear requests to AI and get exactly the result you want.",x2:"Use AI for everyday tasks: emails, official letters, budget, meal plans.",x3:"Create your own visuals, newsletter and a simple website with AI.",x4:"Prepare for the EPSO competitions: reasoning tests and interview, with AI as your coach.",x5:"Parents and children build revision games together from the lessons.",x6:"Run a project with AI: planning, risk tracking, meeting minutes.",x7:"Build an AI discussion space for a group or association, with no database.",x8:"Organise barter and a local exchange system (LETS) between neighbours, with help from AI.",x9:"Find your BATNA (your best option if the negotiation fails) and negotiate from there with several parties.",x10:"Create and share open resources for a group: documents, tools, knowledge.",x11:"Check a piece of news, an image or a video before believing or sharing it.",x12:"Understand money and imagine other ways to exchange value.",x13:"Understand how a message is encrypted, and how AI can invent secret languages.",x14:"Understand how data moves through networks, using the ideas of Deleuze and Guattari.",cOk:"I agree that my data is used to manage my registration for the presentation.",cNews:"I want to receive information about upcoming workshops (optional).",cMore:"Read the privacy policy",eOk:"Tick the consent box to sign up.",rT:"PRIVACY · GDPR",r1:"Controller",r2:"Data collected",r2t:"Last name, first name, email, chosen presentation, day, course language.",r3:"Why",r3t:"To manage your registration and send you practical information about the presentation. If you agreed, to tell you about upcoming workshops.",r4:"Legal basis",r4t:"Your consent, which you can withdraw at any time.",r5:"Retention",r5t:"Your data is deleted no later than 6 months after the presentation, unless you sign up for a workshop.",r6:"Sharing",r6t:"Your data is never sold or passed on. It is stored in a private Google Sheet (Google).",r7:"Your rights",r7t:"Access, correction, deletion, withdrawal of consent: write to the address above. You can also file a complaint with the Data Protection Authority (dataprotectionauthority.be).",top1:"1UP: YOU",city:"BRUSSELS",cityc:"Brussels",credit:"CREDIT: 0 €",season:"SEASON 1",ready:"FREE PRESENTATION OF THE WORKSHOPS",sat:"SAT 5",sun:"SUN 6",dec:"DEC 2026",decs:"DEC",priceL:"PRICE",free:"FREE",timeL:"TIME",langL:"COURSE LANGUAGE",langV:"FR or EN",limited:"Limited seats.",how:"How it works",s1:"1. SIGN UP",s1t:"Free presentation, on 5 or 6 December.",s2:"2. PRESENTATION",s2t:"The two workshop series, Q&A.",s3:"3. WORKSHOP",s3t:"Each workshop: 6 sessions, in FR or EN.",w1:"The 6 everyday AI workshops",w1u:"THE 6 EVERYDAY AI WORKSHOPS",l3:"SHOWCASE",l5:"HOMEWORK GAME",l6:"PROJECT PILOT",w2:"AI & Democracy series",w2u:"AI & DEMOCRACY SERIES",d2:"SERVICE EXCHANGE",d4:"DIGITAL COMMONS",d5:"MEDIA VERIFICATION",d6:"CURRENCY",d7:"CRYPTOGRAPHY",d8:"RHIZOME & DATA",cta2:"BOOK MY FREE SEAT",regT:"SIGN-UP · FREE PRESENTATION",quit:"✕ QUIT",q1:"1 · CHOOSE YOUR PRESENTATION",o1:"Prompt Master · Life Easy · Showcase · Boss EPSO · Homework game · Project pilot",o2:"Chatbot / Room · Service exchange · BATNA · Digital commons · Media verification · Currency · Cryptography · Rhizome & data",q2:"2 · CHOOSE YOUR DAY",q3:"3 · ENTER YOUR PLAYER NAME",nameL:"FIRST AND LAST NAME",fr:"French",ok:"MISSION ACCEPTED",okT:"Your seat is booked. A confirmation email is on its way.",sending:"SENDING…",eSend:"Your registration could not be sent. Check your connection and try again.",openF:"OPEN THE FORM",back:"◀ BACK",next:"NEXT ▶",val:"▶ CONFIRM",p1:"Presentation 1 · The 6 everyday AI workshops",p2:"Presentation 2 · AI & Democracy series",day5:"Saturday 5 December 2026",day6:"Sunday 6 December 2026",courses:"Courses in ",eName:"Enter your first and last name.",eMail:"Enter a valid email address, for example name@example.be.",eLang:"Choose the course language: FR or EN.",
+  en:{vT:"Come to the workshops",vX:"Hands-on workshops in small groups to learn how to use artificial intelligence in daily life, at work and in society. No coding needed: you learn to direct the machine. Discover both series at the free presentation.",c1:"Prompt engineering: asking LLMs the right way",c2:"Simplifying everyday life with LLMs",c3:"Creating images, emails and a website with LLMs",c4:"Preparing for EPSO competitions with LLMs",c5:"Gamified homework and revision, with children",c6:"Managing a project with LLMs",c7:"Building an LLM discussion space (chatbot)",c8:"Exchanging services: barter and LETS boosted by LLMs",c9:"Find the BATNA and start from the BATNA",c10:"Building digital commons",c11:"Verifying media and spotting misinformation",c12:"Rethinking currency and exchange",c13:"Cryptography and LLM-generated languages",c14:"Rhizome and data: thinking in networks",eyebrow:"Season 1 · AI workshops",datesL:"Dates",cta1:"Book my seat",progT:"Programme",manT:"Manifesto",modL:"Module",hero:"Free presentation of the AI workshops, in Brussels. Two series, six sessions per workshop, in French or English.",cOk:"I agree that my data is used to manage my registration for the presentation.",cNews:"I want to receive information about upcoming workshops (optional).",cMore:"Read the privacy policy",eOk:"Tick the consent box to sign up.",rT:"PRIVACY · GDPR",r1:"Controller",r2:"Data collected",r2t:"Last name, first name, email, chosen presentation, day, course language.",r3:"Why",r3t:"To manage your registration and send you practical information about the presentation. If you agreed, to tell you about upcoming workshops.",r4:"Legal basis",r4t:"Your consent, which you can withdraw at any time.",r5:"Retention",r5t:"Your data is deleted no later than 6 months after the presentation, unless you sign up for a workshop.",r6:"Sharing",r6t:"Your data is never sold or passed on. It is stored in a private Google Sheet (Google).",r7:"Your rights",r7t:"Access, correction, deletion, withdrawal of consent: write to the address above. You can also file a complaint with the Data Protection Authority (dataprotectionauthority.be).",top1:"1UP: YOU",city:"BRUSSELS",cityc:"Brussels",credit:"CREDIT: 0 €",season:"SEASON 1",ready:"FREE PRESENTATION OF THE WORKSHOPS",sat:"SAT 5",sun:"SUN 6",dec:"DEC 2026",decs:"DEC",priceL:"PRICE",free:"FREE",timeL:"TIME",langL:"COURSE LANGUAGE",langV:"FR or EN",limited:"Limited seats.",how:"How it works",s1:"1. SIGN UP",s1t:"Free presentation, on 5 or 6 December.",s2:"2. PRESENTATION",s2t:"The two workshop series, Q&A.",s3:"3. WORKSHOP",s3t:"Each workshop: 6 sessions, in FR or EN.",w1:"The 6 everyday AI workshops",w1u:"THE 6 EVERYDAY AI WORKSHOPS",l3:"SHOWCASE",l5:"HOMEWORK GAME",l6:"PROJECT PILOT",w2:"AI & Democracy series",w2u:"AI & DEMOCRACY SERIES",d2:"SERVICE EXCHANGE",d4:"DIGITAL COMMONS",d5:"MEDIA VERIFICATION",d6:"CURRENCY",d7:"CRYPTOGRAPHY",d8:"RHIZOME & DATA",cta2:"BOOK MY FREE SEAT",regT:"SIGN-UP · FREE PRESENTATION",quit:"✕ QUIT",q1:"1 · CHOOSE YOUR PRESENTATION",o1:"Prompt Master · Life Easy · Showcase · Boss EPSO · Homework game · Project pilot",o2:"Chatbot / Room · Service exchange · BATNA · Digital commons · Media verification · Currency · Cryptography · Rhizome & data",q2:"2 · CHOOSE YOUR DAY",q3:"3 · YOUR DETAILS",nameL:"FIRST AND LAST NAME",fr:"French",ok:"Registration confirmed",okT:"Your seat is booked. A confirmation email is on its way.",sending:"SENDING…",eSend:"Your registration could not be sent. Check your connection and try again.",openF:"OPEN THE FORM",back:"◀ BACK",next:"NEXT ▶",val:"▶ CONFIRM",p1:"Presentation 1 · The 6 everyday AI workshops",p2:"Presentation 2 · AI & Democracy series",day5:"Saturday 5 December 2026",day6:"Sunday 6 December 2026",courses:"Courses in ",eName:"Enter your first and last name.",eMail:"Enter a valid email address, for example name@example.be.",eLang:"Choose the course language: FR or EN.",
    tick:["School taught you to obey. We teach you to command.","The future isn't waited for. It's prompted.","They’re training it on you. Train yourself on it."]}
   };
   var lang='fr';
@@ -405,7 +334,7 @@ body{padding-bottom:calc(160px + env(safe-area-inset-bottom,0px))!important}
     next.disabled=true;next.textContent=L().sending;
     fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})
       .then(function(r){return r.json();})
-      .then(function(res){if(!res||!res.ok)throw new Error(res&&res.error);step=4;render();if(window.startRobotBoom)window.startRobotBoom();})
+      .then(function(res){if(!res||!res.ok)throw new Error(res&&res.error);step=4;render();})
       .catch(function(){err.textContent=L().eSend;next.disabled=false;next.textContent=L().val;});
   });
   document.getElementById('regclose').addEventListener('click',close);
@@ -417,188 +346,5 @@ body{padding-bottom:calc(160px + env(safe-area-inset-bottom,0px))!important}
 })();
 </script>
 
-<script>
-(function(){
-var c=document.getElementById('boomc'),x=c.getContext('2d'),W=300,H=270,P=4,OX=22,OY=14,GW=64,GH=60;
-var g=[];for(var yy=0;yy<GH;yy++){g.push(new Array(GW).fill(null));}
-function pt(px_,py_,cl){if(px_>=0&&px_<GW&&py_>=0&&py_<GH)g[py_][px_]=cl;}
-function rect(x0,y0,x1,y1,cl){for(var j=y0;j<=y1;j++)for(var i=x0;i<=x1;i++)pt(i,j,cl);}
-function disc(cx_,cy_,r,cl){for(var j=-r;j<=r;j++)for(var i=-r;i<=r;i++)if(i*i+j*j<=r*r+r*.6)pt(cx_+i,cy_+j,cl);}
-function line(x0,y0,x1,y1,cl){var dx=Math.abs(x1-x0),dy=-Math.abs(y1-y0),sx=x0<x1?1:-1,sy=y0<y1?1:-1,e=dx+dy;for(;;){pt(x0,y0,cl);if(x0===x1&&y0===y1)break;var e2=2*e;if(e2>=dy){e+=dy;x0+=sx;}if(e2<=dx){e+=dx;y0+=sy;}}}
-var O='#2c2246',L1='#e4def7',L2='#c3bbe0',G='#9c93bd',S1='#7d74a3',S2='#5c5385',GOLD='#ffd23f',GOLDH='#fff1b0',V='#120c26',V2='#241a44',CY='#56e0ff',CYD='#2aa6c4',WH='#ffffff',PU='#1b4f7a',PK='#ff5fa2',PKD='#7a2a55',RD='#ff3b5c';
-// antenne
-rect(31,4,32,9,S1);rect(30,9,33,10,O);disc(31,3,3,PK);pt(30,2,WH);
-// oreilles
-rect(2,20,8,42,O);rect(3,21,7,41,S1);rect(3,21,4,41,G);disc(5,25,1,GOLD);disc(5,37,1,GOLD);rect(4,30,6,32,V);
-rect(55,20,61,42,O);rect(56,21,60,41,S1);rect(56,21,57,41,G);disc(58,25,1,GOLD);disc(58,37,1,GOLD);rect(57,30,59,32,V);
-// tête : dégradé vertical
-rect(8,10,55,52,O);
-var shades=[L1,L1,L2,L2,L2,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,S1,S1,S1,S1,S2,S2,S2];
-for(var k=0;k<shades.length;k++)rect(9,11+k,54,11+k,shades[k]);
-rect(9,11,10,51,L2);rect(53,11,54,51,S1);
-pt(8,10,null);pt(55,10,null);pt(8,52,null);pt(55,52,null);
-// ligne de panneau + rivets
-rect(9,15,54,15,S1);rect(9,16,54,16,L2);
-[[12,12],[50,12],[12,48],[50,48]].forEach(function(q){rect(q[0],q[1],q[0]+1,q[1]+1,GOLD);pt(q[0],q[1],GOLDH);});
-// fentes du front
-for(var v=0;v<3;v++){rect(24,18+v*2,39,18+v*2,O);rect(24,19+v*2,39,19+v*2,L2);}
-// fissure
-line(46,12,49,17,O);line(49,17,47,20,O);line(49,17,52,19,O);
-// visière
-rect(12,23,51,36,O);rect(13,24,50,35,V);rect(13,24,50,24,V2);
-for(var sl=26;sl<35;sl+=3)rect(13,sl,50,sl,V2);
-// yeux
-[[22,30],[41,30]].forEach(function(e){disc(e[0],e[1],5,CYD);disc(e[0],e[1],4,CY);disc(e[0],e[1],2,PU);pt(e[0],e[1],V);pt(e[0]-2,e[1]-2,WH);pt(e[0]-1,e[1]-3,WH);});
-// nez
-rect(30,38,33,40,S1);rect(30,38,33,38,L2);
-// joues : grilles + voyants
-for(var cv=0;cv<3;cv++){rect(12+cv*2,39,12+cv*2,45,O);rect(47+cv*2,39,47+cv*2,45,O);}
-disc(20,41,1,RD);disc(43,41,1,RD);
-// bouche LED
-rect(21,43,42,50,O);rect(22,44,41,49,V);
-for(var my=0;my<3;my++)for(var mx=0;mx<10;mx++)if((mx+my)%2===0)rect(22+mx*2,44+my*2,23+mx*2,45+my*2,PK);else rect(22+mx*2,44+my*2,23+mx*2,45+my*2,PKD);
-// cou
-rect(23,53,40,59,O);for(var nk=54;nk<59;nk+=2){rect(24,nk,39,nk,S1);rect(24,nk+1,39,nk+1,G);}
-var px=[];
-for(var y2=0;y2<GH;y2++)for(var x2=0;x2<GW;x2++)if(g[y2][x2])px.push({hx:OX+x2*P,hy:OY+y2*P,c:g[y2][x2]});
-var cx=OX+32*P,cy=OY+30*P;
-var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-var phase='idle',t=0,sparks=[];
-function reset(){phase='idle';t=0;sparks=[];px.forEach(function(p){p.x=p.hx;p.y=p.hy;p.r=0;p.vr=0;});}
-function boom(){if(phase==='boom')return;phase='boom';t=0;
-  px.forEach(function(p){var a=Math.atan2(p.hy-cy,p.hx-cx)+(Math.random()-.5)*.8,s=2+Math.random()*7;p.vx=Math.cos(a)*s;p.vy=Math.sin(a)*s-2.5;p.vr=(Math.random()-.5)*.4;});
-  for(var i=0;i<60;i++){var a=Math.random()*7,s=2+Math.random()*6;sparks.push({x:cx,y:cy,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:20+Math.random()*25});}}
-function drawPx(p,shake){x.save();x.translate(p.x+P/2+shake,p.y+P/2);x.rotate(p.r);var cc=p.c;if(phase==='idle'){if(t>70&&cc==='#56e0ff')cc='#ff3b3b';if(cc==='#ff5fa2'&&p.hy<OY+7*P&&t%30<15)cc='#ffd23f';if(t%90>84&&(cc==='#56e0ff'||cc==='#ffffff'||cc==='#1b4f7a'))cc='#120c26';}x.fillStyle=cc;x.fillRect(-P/2,-P/2,P,P);x.restore();}
-function frame(){
-  x.fillStyle='#1a0f2e';x.fillRect(0,0,W,H);
-  t++;
-  if(phase==='idle'){
-    var heat=Math.min(t/120,1),sh=t>70?(Math.random()-.5)*heat*6:0;
-    px.forEach(function(p){drawPx(p,sh);});
-    if(t>70&&t%10<5){x.fillStyle='rgba(255,59,59,'+(.15+.25*heat)+')';x.fillRect(0,0,W,H);}
-    if(t>60){x.fillStyle='#ffd23f';x.font='8px "Press Start 2P", monospace';x.textAlign='center';x.fillText(t%20<10?'! OVERHEAT !':'',W/2,22);}
-    if(!reduce&&t>130)boom();
-  } else {
-    if(t<10){x.fillStyle='rgba(255,255,255,'+(1-t/10)+')';x.fillRect(0,0,W,H);}
-    if(t<24){x.strokeStyle='rgba(255,210,63,'+(1-t/24)+')';x.lineWidth=6;x.beginPath();x.arc(cx,cy,t*9,0,7);x.stroke();}
-    px.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=.3;p.vx*=.99;p.r+=p.vr;drawPx(p,0);});
-    sparks.forEach(function(s){if(s.l>0){s.x+=s.vx;s.y+=s.vy;s.vy+=.15;s.l--;x.fillStyle=s.l>10?'#ffd23f':'#ff5fa2';x.fillRect(s.x,s.y,3,3);}});
-    if(t>40&&t<100){x.fillStyle='#ffd23f';x.font='14px "Press Start 2P", monospace';x.textAlign='center';x.fillText('BOOM',W/2,H/2);}
-    if(t>130)reset();
-  }
-  requestAnimationFrame(frame);}
-reset();var running=false;
-c.addEventListener('click',function(){boom();});
-window.startRobotBoom=function(){reset();t=reduce?0:55;
- if(reduce){x.fillStyle='#1a0f2e';x.fillRect(0,0,W,H);px.forEach(function(p){drawPx(p,0);});return;}
- if(!running){running=true;requestAnimationFrame(frame);}};
-})();
-</script>
-<script>
-(function(){
-var c=document.getElementById('race');if(!c||!c.getContext)return;var x=c.getContext('2d'),W=360,H=54,U=2,SW=32;
-// palette par rat : [corps, ombre, reflet, ventre]
-var GREY=['#6c5f96','#4d4372','#8d81b8','#a79fcc'],GOLD=['#ffd23f','#d9a400','#fff1a6','#fff6cf'];
-function rat(px,py,dir,t,pal,speed){
-  var body=pal[0],dark=pal[1],lite=pal[2],belly=pal[3];
-  function p(lx,ly,col){var X=dir<0?px+lx*U:px+(SW-1-lx)*U;x.fillStyle=col;x.fillRect(Math.round(X),Math.round(py+ly*U),U,U);}
-  var ph=t*speed*0.22,bob=Math.round(Math.sin(ph*2)*0.6);
-  // queue ondulante
-  for(var i=0;i<11;i++){var ty=6+Math.round(Math.sin(ph+i*0.55)*1.4+i*0.12);p(21+i,ty+bob,i<3?dark:'#ff9cc6');}
-  // corps (ellipse) avec ombre et reflet
-  for(var y=1;y<=10;y++)for(var xx=7;xx<=21;xx++){var dx=(xx-14)/7.2,dy=(y-6)/4.2;if(dx*dx+dy*dy<=1){var col=body;if(y<=3)col=lite;if(y>=8)col=belly;if(xx>=19&&y>=5)col=dark;p(xx,y+bob,col);}}
-  // tête
-  for(var y2=3;y2<=9;y2++)for(var x2=1;x2<=9;x2++){var ex=(x2-5.2)/4.3,ey=(y2-6.2)/3.1;if(ex*ex+ey*ey<=1)p(x2,y2+bob,y2<=4?lite:(y2>=8?belly:body));}
-  // museau + nez
-  p(0,7+bob,body);p(1,7+bob,body);p(0,6+bob,body);p(-1,7+bob,'#ff5fa2');
-  // moustaches
-  p(-2,6+bob,'#e6e0ff');p(-3,5+bob,'#e6e0ff');p(-2,8+bob,'#e6e0ff');p(-3,9+bob,'#e6e0ff');
-  // oreille
-  p(6,1+bob,dark);p(7,1+bob,dark);p(8,2+bob,dark);p(5,2+bob,dark);p(6,2+bob,'#ff9cc6');p(7,2+bob,'#ff9cc6');p(6,3+bob,'#ff9cc6');
-  // œil
-  p(3,5+bob,'#120c26');p(4,5+bob,'#120c26');p(3,4+bob,'#ffffff');
-  // pattes : cycle de course sur 4 temps
-  var k=Math.floor(ph)%4,fl=[[0,1],[1,0],[0,0],[1,1]][k];
-  function leg(lx,up){var y0=10+bob;p(lx,y0,dark);p(lx,y0+1-up,dark);p(lx+(up?-1:1),y0+2-up,dark);}
-  leg(8,fl[0]);leg(11,fl[1]);leg(16,fl[1]);leg(19,fl[0]);
-}
-var pack=[];for(var n=0;n<5;n++)pack.push({x:-60-n*70-Math.random()*40,s:1.2+Math.random()*.5,y:6+(n%2)*10});
-var hero={x:W+20,s:1.9,y:12};
-var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,t=0;
-function frame(){t++;x.clearRect(0,0,W,H);
- pack.forEach(function(r){r.x+=r.s;if(r.x>W+40)r.x=-70-Math.random()*90;rat(r.x,r.y,1,t,GREY,r.s);});
- hero.x-=hero.s;if(hero.x<-80)hero.x=W+40;
- for(var d=0;d<4;d++){x.fillStyle='rgba(255,210,63,'+(0.35-d*0.08)+')';x.fillRect(hero.x+SW*U+6+d*7,hero.y+20+((t+d*3)%6<3?0:2),3,3);}
- rat(hero.x,hero.y,-1,t,GOLD,hero.s);
- if(!reduce)requestAnimationFrame(frame);}
-if(reduce){hero.x=200;pack.forEach(function(r,i){r.x=4+i*44;});}
-frame();
-})();
-</script>
-
-<script>
-(function(){
-var sl=[].slice.call(document.querySelectorAll('.slide')),cur=0,dots=document.getElementById('dots'),prev=document.getElementById('prev'),nxt=document.getElementById('nextS'),fl=document.getElementById('flash'),flT=document.getElementById('flashT');
-sl.forEach(function(_,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',(i+1)+' / '+sl.length);b.addEventListener('click',function(){go(i);});dots.appendChild(b);});
-function paint(){var sbT=document.getElementById('sbT'),sbF=document.getElementById('sbF');if(sbT){sbT.textContent='STAGE '+(cur+1)+' / '+sl.length;sbF.style.width=((cur+1)/sl.length*100)+'%';}[].forEach.call(dots.children,function(b,i){b.setAttribute('aria-current',i===cur?'true':'false');});prev.disabled=cur===0;nxt.disabled=cur===sl.length-1;}
-var busy=false,cv=document.createElement('canvas');cv.className='wipe';cv.setAttribute('aria-hidden','true');document.querySelector('.screen').appendChild(cv);
-var reduceW=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function swap(n){sl[cur].classList.remove('on','in-r','in-l');cur=n;sl[cur].classList.add('on');paint();var top=document.querySelector('.screen').getBoundingClientRect().top+window.scrollY-10;if(window.scrollY>top)window.scrollTo({top:top});}
-function go(n){if(busy||n<0||n>=sl.length||n===cur)return;if(window.ratzSfx)window.ratzSfx('step',n>cur);
- if(reduceW){swap(n);return;}
- busy=true;var scr=document.querySelector('.screen'),W=scr.clientWidth,H=Math.max(scr.clientHeight,1600),B=Math.max(18,Math.round(W/22));cv.width=W;cv.height=H;cv.style.display='block';var x=cv.getContext('2d');
- var cols=Math.ceil(W/B),rows=Math.ceil(H/B),cells=[];for(var r=0;r<rows;r++)for(var c=0;c<cols;c++)cells.push([c,r,Math.random()]);
- var dirR=n>cur,label='STAGE '+(n+1)+' / '+sl.length,t0=performance.now(),D=320,HOLD=260,swapped=false,pal=['#ff5fa2','#56e0ff','#ffd23f','#1a0f2e','#24164a'];
- function draw(now){var t=now-t0;x.clearRect(0,0,W,H);
-  var p1=Math.min(t/D,1),p2=t>D+HOLD?Math.min((t-D-HOLD)/D,1):0;
-  if(p1>=1&&!swapped){swap(n);swapped=true;}
-  cells.forEach(function(cl){var k=(dirR?cl[0]/cols:1-cl[0]/cols)*.6+cl[2]*.4;if(k<=p1&&k>p2){x.fillStyle=(cl[0]+cl[1])%7===0?pal[(cl[0]*3+cl[1])%3]:'#1a0f2e';x.fillRect(cl[0]*B,cl[1]*B,B-1,B-1);}});
-  if(p2<1)requestAnimationFrame(draw);else{cv.style.display='none';busy=false;}}
- requestAnimationFrame(draw);}
-prev.addEventListener('click',function(){go(cur-1);});nxt.addEventListener('click',function(){go(cur+1);});
-document.addEventListener('keydown',function(e){var r=document.getElementById('reg');if(r&&!r.hidden)return;if(/^(INPUT|TEXTAREA)$/.test((e.target||{}).tagName))return;if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
-var x0=null,y0=null,deck=document.getElementById('deck');
-deck.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true});
-deck.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1));x0=null;},{passive:true});
-paint();
-function ph(){var p=document.querySelector('.pad');if(p)document.documentElement.style.setProperty('--padh',p.offsetHeight+'px');}ph();addEventListener('resize',ph);
-})();
-</script>
-<script>
-(function(){
-var AC=window.AudioContext||window.webkitAudioContext,ctx=null,on=true,btn=document.getElementById('snd');
-try{if(localStorage.getItem('ratz-snd')==='off')on=false;}catch(e){}
-function ui(){if(!btn)return;btn.textContent=on?'SON ON':'SON OFF';btn.setAttribute('aria-pressed',on?'true':'false');}
-function ac(){if(!AC||!on)return null;if(!ctx){try{ctx=new AC();}catch(e){return null;}}if(ctx.state==='suspended')ctx.resume();return ctx;}
-function tone(f,t0,d,type,vol){var c=ac();if(!c)return;var o=c.createOscillator(),g=c.createGain();o.type=type||'square';o.frequency.setValueAtTime(f,c.currentTime+t0);g.gain.setValueAtTime(vol||.06,c.currentTime+t0);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+t0+d);o.connect(g);g.connect(c.destination);o.start(c.currentTime+t0);o.stop(c.currentTime+t0+d+.02);}
-function noise(d,vol){var c=ac();if(!c)return;var n=Math.floor(c.sampleRate*d),b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);for(var i=0;i<n;i++)a[i]=(Math.random()*2-1)*Math.pow(1-i/n,2);var s=c.createBufferSource(),g=c.createGain(),lp=c.createBiquadFilter();lp.type='lowpass';lp.frequency.value=900;g.gain.value=vol||.25;s.buffer=b;s.connect(lp);lp.connect(g);g.connect(c.destination);s.start();}
-var SFX={
- step:function(fw){var n=fw?[392,523,659,784]:[784,659,523,392];n.forEach(function(f,i){tone(f,i*.06,.08,'square',.05);});tone(fw?1047:262,.3,.18,'triangle',.06);},
- coin:function(){tone(988,0,.08,'square',.06);tone(1319,.08,.25,'square',.06);},
- boom:function(){[440,330,220,110].forEach(function(f,i){tone(f,i*.06,.12,'sawtooth',.05);});setTimeout(function(){noise(1.4,.45);tone(80,0,.6,'sine',.25);tone(55,.05,.9,'sine',.2);},1250);},
- win:function(){var m=[[523,0],[659,.12],[784,.24],[1047,.36],[784,.52],[1047,.64]];m.forEach(function(n){tone(n[0],n[1],.14,'square',.06);});tone(1319,.8,.55,'square',.06);tone(262,.8,.55,'triangle',.07);}
-};
-window.ratzSfx=function(k,a){if(on&&SFX[k])try{SFX[k](a);}catch(e){};
-};
-if(btn)btn.addEventListener('click',function(){on=!on;try{localStorage.setItem('ratz-snd',on?'on':'off');}catch(e){}ui();if(on)window.ratzSfx('coin');});
-document.querySelectorAll('a[href="#inscription"]').forEach(function(a){a.addEventListener('click',function(){window.ratzSfx('coin');});});
-var rb=window.startRobotBoom;if(rb)window.startRobotBoom=function(){window.ratzSfx('win');window.ratzSfx('boom');return rb.apply(this,arguments);};
-// musique de fond
-var BPM=118,step=60/BPM/2,bass=[110,110,131,131,98,98,147,131],arp=[440,523,659,523,392,494,587,494,349,440,523,440,392,494,587,659],ns=0,nextT=0,timer=null;
-function vol(){return .022;}
-function sched(){var c=ac();if(!c||!on){stopMusic();return;}while(nextT<c.currentTime+.25){var i=ns%16;var t=nextT-c.currentTime;
- if(i%2===0)tone(bass[(ns>>1)%8],Math.max(0,t),step*1.6,'triangle',vol()*2.2);
- tone(arp[i],Math.max(0,t),step*.7,'square',vol());
- if(i%4===2)tone(2000,Math.max(0,t),.03,'square',vol()*.6);
- nextT+=step;ns++;}}
-function startMusic(){var c=ac();if(!c||timer)return;nextT=c.currentTime+.05;timer=setInterval(sched,60);}
-function stopMusic(){if(timer){clearInterval(timer);timer=null;}}
-function kick(){if(on)startMusic();}
-['pointerdown','keydown','touchstart'].forEach(function(ev){document.addEventListener(ev,kick,{passive:true});});
-document.addEventListener('visibilitychange',function(){if(document.hidden)stopMusic();else if(on&&ctx)startMusic();});
-if(btn)btn.addEventListener('click',function(){if(!on)stopMusic();});
-ui();
-})();
-</script>
 </body>
 </html>
